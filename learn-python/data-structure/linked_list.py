@@ -76,7 +76,7 @@ if __name__ == '__main__':
 	linked_list.insert('alex')
 	linked_list.insert('sams')
 	linked_list.insert('graham')
-
+    linked_list.insert('rio')
 	linked_list.search('adit')
 	linked_list.display()
 	linked_list.delete('sams')
