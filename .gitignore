@@ -1,6 +1,6 @@
-BasicJava/ld/
-BasicJava/nbbuild/
-BasicJava/dist/
-BasicJava/nbdist/
-BasicJava/nbactions.xml
-BasicJava/.nb-gradle
+*/.idea/*
+*.pyc
+*.class
+learn-java/build/*
+learn-scala/out/*
+.DS_Store
