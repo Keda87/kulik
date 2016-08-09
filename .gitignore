@@ -1,6 +1,9 @@
 */.idea/*
 *.pyc
 *.class
+*.jar
+learn-haskell/out/*
+learn-haskell/dist/*
 learn-java/build/*
 learn-scala/out/*
 .DS_Store
