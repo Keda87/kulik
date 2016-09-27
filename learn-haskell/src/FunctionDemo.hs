@@ -8,3 +8,13 @@ doubleSmallNumber x = (if x > 100 then x else x*2)
 removeUpperCase arg = [x | x <- arg, x `elem` ['A'..'Z']]
 
 getVowel arg = [x | x <- arg, x `elem` ['a', 'A', 'i', 'I', 'u', 'U', 'e', 'E', 'o', 'O']]
+
+greet() =
+  do planet <- getLine
+     home <- getLine
+     putStrLn ("Greetings " ++ planet ++ " ling.")
+     putStrLn ("I am from " ++ home ++ ".")
+     putStrLn "Take me to your leader."
+
+-- One liner greet.
+one_liner_greet = do { planet <- getLine; home <- getLine; putStrLn ("Greetings " ++ planet ++ " ling."); putStrLn ("I am from " ++ home ++ ".")}
