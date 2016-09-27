@@ -24,5 +24,5 @@ factorial :: Int -> Int
 factorial n = if n == 0 then 1 else n * factorial(n - 1)
 
 -- Make people noble function
-mknoble :: String -> String
-mknoble name = "Sir " ++ name
+mknoble :: Bool -> String -> String
+mknoble female name = (if female then "Dame " else "Sir ") ++ name
