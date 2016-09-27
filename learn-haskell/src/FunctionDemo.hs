@@ -18,3 +18,11 @@ greet() =
 
 -- One liner greet.
 one_liner_greet = do { planet <- getLine; home <- getLine; putStrLn ("Greetings " ++ planet ++ " ling."); putStrLn ("I am from " ++ home ++ ".")}
+
+-- Simple factorial definition.
+factorial :: Int -> Int
+factorial n = if n == 0 then 1 else n * factorial(n - 1)
+
+-- Make people noble function
+mknoble :: String -> String
+mknoble name = "Sir " ++ name
