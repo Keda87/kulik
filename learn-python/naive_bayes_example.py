@@ -60,17 +60,17 @@ Temperature : MILD
 Humidity    : NORMAL
 Windy       : True
 """
-p_rainy_yes     = Decimal(OUTLOOK['Rainy'][0]) / 9
-p_mild_yes      = Decimal(TEMPERATURE['Mild'][0]) / 9
-p_normal_yes    = Decimal(HUMIDITY['Normal'][0]) / 9
-p_windy_yes     = Decimal(WINDY['True'][0]) / 9
-p_yes           = Decimal(9) / 14
+p_rainy_yes     = OUTLOOK['Rainy'][0] / Decimal(9)
+p_mild_yes      = TEMPERATURE['Mild'][0] / Decimal(9)
+p_normal_yes    = HUMIDITY['Normal'][0] / Decimal(9)
+p_windy_yes     = WINDY['True'][0] / Decimal(9)
+p_yes           = 9 / Decimal(len(data))
 
-p_rainy_no     = Decimal(OUTLOOK['Rainy'][1]) / 5
-p_mild_no      = Decimal(TEMPERATURE['Mild'][1]) / 5
-p_normal_no    = Decimal(HUMIDITY['Normal'][1]) / 5
-p_windy_no     = Decimal(WINDY['True'][1]) / 5
-p_no           = Decimal(5) / 14
+p_rainy_no     = OUTLOOK['Rainy'][1] / Decimal(5)
+p_mild_no      = TEMPERATURE['Mild'][1] / Decimal(5)
+p_normal_no    = HUMIDITY['Normal'][1] / Decimal(5)
+p_windy_no     = WINDY['True'][1] / Decimal(5)
+p_no           = 5 / Decimal(len(data))
 
 likehood_yes    = p_rainy_yes * p_mild_yes * p_normal_yes * p_windy_yes * p_yes
 likehood_no     = p_rainy_no * p_mild_no * p_normal_no * p_windy_no * p_no
