@@ -6,4 +6,6 @@ learn-haskell/out/*
 learn-haskell/dist/*
 learn-java/build/*
 learn-scala/out/*
+learn-kotlin/out/*
 .DS_Store
+*.iml
