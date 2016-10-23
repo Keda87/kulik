@@ -11,6 +11,18 @@ class BinaryTreeDemo(object):
     def __init__(self, node=None):
         self.root = node
 
+    def preorder_tree_walk(self, node=None):
+        if node is not None:
+            print node.data,
+            self.preorder_tree_walk(node.left)
+            self.preorder_tree_walk(node.right)
+
+    def postorder_tree_walk(self, node=None):
+        if node is not None:
+            self.postorder_tree_walk(node.left)
+            self.postorder_tree_walk(node.right)
+            print node.data,
+
     def inorder_tree_walk(self, node=None):
         if node is not None:
             self.inorder_tree_walk(node.left)
@@ -57,8 +69,13 @@ if __name__ == '__main__':
     bt.right.right = Node(8)
 
     bin_tree = BinaryTreeDemo(bt)
+    print '\nIn Order:',
     bin_tree.inorder_tree_walk(bin_tree.root)
-    print
-    print bin_tree.search(data=7)
+    print '\nPost Order:',
+    bin_tree.postorder_tree_walk(bin_tree.root)
+    print '\nPre Order:',
+    bin_tree.preorder_tree_walk(bin_tree.root)
+
+    print bin_tree.search(data=7).data
     print 'Max: {}'.format(bin_tree.max().data)
     print 'Min: {}'.format(bin_tree.min().data)
