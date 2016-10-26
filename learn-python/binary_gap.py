@@ -26,7 +26,7 @@ expected worst-case space complexity is O(1).
 """
 def solution(n):
     binary = '{0:b}'.format(n)
-    arr = [len(x) for x in binary.split('1') if x]
+    arr = [len(x) for x in binary.split('1') if x and binary.split('1').index(x) not in [0, len(binary.split('1')) - 1]]
     return max(arr) if arr else 0
 
 
