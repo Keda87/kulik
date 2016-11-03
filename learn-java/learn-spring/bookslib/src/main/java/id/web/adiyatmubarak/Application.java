@@ -15,11 +15,11 @@ public class Application {
     private static final Logger log = LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+        SpringApplication.run(Application.class, args);
+    }
 
-	@Bean
-	public CommandLineRunner demo(AuthorRepository repository) {
+    @Bean
+    public CommandLineRunner demo(AuthorRepository repository) {
         return (args) -> {
             // Save some customers.
             repository.save(new Author("John", "Doe"));
@@ -31,7 +31,7 @@ public class Application {
             // Fetch all author.
             log.info("Fetch all authors.");
             log.info("------------------");
-            for (Author author: repository.findAll()) {
+            for (Author author : repository.findAll()) {
                 log.info(author.toString());
             }
             log.info("");
@@ -46,7 +46,7 @@ public class Application {
             // Fetch last name that has Mubarak.
             log.info("Fetch authors that has last name 'Mubarak'.");
             log.info("------------------");
-            for (Author a: repository.findByLastName("Mubarak")) {
+            for (Author a : repository.findByLastName("Mubarak")) {
                 log.info(a.toString());
             }
             log.info("");

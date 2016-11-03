@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Author Form</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <form action="#" th:action="@{/author}" th:object="${author}" method="post">
+            <p><input type="hidden" th:field="*{id}" /></p>
+            <p>First Name: <input type="text" th:field="*{firstName}" /></p>
+            <p>Last Name: <input type="text" th:field="*{lastName}" /></p>
+            <input type="submit" />
+        </form>
+    </body>
+</html>
