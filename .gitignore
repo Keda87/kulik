@@ -8,3 +8,6 @@ learn-scala/out/*
 learn-kotlin/out/*
 .DS_Store
 *.iml
+learn-java/learn-java-core/.idea/*
+learn-java/learn-spring/spring-boot-demo/.idea/*
+learn-python/.vscode/*
