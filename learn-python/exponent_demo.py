@@ -7,6 +7,17 @@ def bad_exponent(a, b):
     return result
 
 
+def another_bad_exponent(a, b):
+    if b == 0:
+        return 1
+    if b < 0:  # Case for minus.
+        return 1 / pangkat(a, abs(b))
+    else:
+        if b == 1:
+            return a
+        return a * pangkat(a, b - 1)
+
+
 def good_exponent(a, b):
     """Compute exponentiation a^b with exponentiation
     with squaring algorithm that has O(log(n) + log(n)).
